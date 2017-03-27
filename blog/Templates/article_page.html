@@ -9,6 +9,8 @@
 <h1>{{ article.id }}</h1>
 <h1>{{ article.title }}</h1>
 <h1>{{ article.content }}</h1>
+<br/>
+<a href="{% url 'blog:edit_page' article.id %}">Edit Article</a>
 
 </body>
 </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New article</title>
+</head>
+<body>
+<form action="{%  url 'blog:save' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{ article.id }}">
+<label>Article Title <input type="text" name="title" value="{{ article.title }}"/></label>
+    <br/>
+<label>Article Content <input type="text" name="content" value="{{ article.content }}"/></label>
+<br/>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>
