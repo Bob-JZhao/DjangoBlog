@@ -6,10 +6,10 @@
 </head>
 <body>
 <h1>{{ hello }}</h1>
-
+<h1><a href="" >new blog</a></h1>
 {% for ar in article reversed %}
 <h1>{{ ar.id }}</h1>
-<h1>{{ ar.title }}</h1>
+    <h1><a href="{% url 'blog:article_page' ar.id %}">{{ ar.title }}</a></h1>
 <h1>{{ ar.content }}</h1>
 {% endfor %}
 
